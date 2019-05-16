@@ -1,0 +1,196 @@
+﻿	<!DOCTYPE html> 
+<html lang = "ru"> 
+<head> 
+	<script>  
+		window.onload = function() { 
+			var counter = 0;
+			var img_max = 4;
+			var device_width = 450 * img_max;
+			var divs = document.querySelector(".content");
+			document.querySelector(".left").addEventListener("click", function() {
+				counter--;
+				console.log(counter);
+				if (counter < 0) {
+					counter = img_max;
+				}
+				if (counter > img_max) {
+					counter = 0;
+				}
+				document.querySelector(".content").style.left = "-" + counter * (device_width / img_max) + "px"; 
+			});
+			document.querySelector(".selector_1").addEventListener("click", function() {
+				counter = 0;
+				console.log(counter);
+				document.querySelector(".content").style.left = "-" + counter * (device_width / img_max) + "px"; 
+			});
+			document.querySelector(".selector_2").addEventListener("click", function() {
+				counter = 1;
+				console.log(counter);
+				document.querySelector(".content").style.left = "-" + counter * (device_width / img_max) + "px"; 
+			});
+			document.querySelector(".selector_3").addEventListener("click", function() {
+				counter = 2;
+				console.log(counter);
+				document.querySelector(".content").style.left = "-" + counter * (device_width / img_max) + "px"; 
+			});
+			document.querySelector(".selector_4").addEventListener("click", function() {
+				counter = 3;
+				console.log(counter);
+				document.querySelector(".content").style.left = "-" + counter * (device_width / img_max) + "px"; 
+			});
+			document.querySelector(".selector_5").addEventListener("click", function() {
+				counter = 4;
+				console.log(counter);
+				document.querySelector(".content").style.left = "-" + counter * (device_width / img_max) + "px"; 
+			});
+			document.querySelector(".right").addEventListener("click", function() {
+				counter++;
+				console.log(counter);
+				if (counter < 0) {
+					counter = img_max;
+				}
+				if (counter > img_max) {
+					counter = 0;
+				}
+				document.querySelector(".content").style.left = "-" + counter * (device_width / img_max) + "px"; 
+			});
+} 
+	</script> 
+<style> 
+body, 
+html { 
+margin:0; 
+padding:0; 
+} 
+.main {
+	position: absolute;
+	width: 450px;
+	height: 300px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.left {
+position: absolute;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+background: gray;
+left: -70px;
+top: 50%;
+transform: translateY(-50%);
+}
+.right {
+position: absolute;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+background: gray;
+right: -70px;
+top: 50%;
+transform: translateY(-50%);
+}
+.container {
+width: 100%;
+height: 100%;
+position: absolute;
+left: 0;
+top:0;
+overflow: hidden;
+}
+.content
+{
+width: 2250px;
+height: 300px;
+position:absolute;
+transition: all 1s;
+background-image: url("img/aaaaaaaaaaaaaaaaaaaaaaaaaaaaa2.jpg");
+left:0;
+top:0;
+background-size: 100%;
+background-position: 0px 0px;
+}
+.selector_1 {
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	left: 17%;
+	transform: translateX(-17%);
+	bottom: -100px;
+	background-image: url("img/aaaaaaaaaaa.png");
+	background-position: -75px -150px;
+	overflow: hidden;
+}
+.selector_2 {
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	left: 34%;
+	transform: translateX(-34%);
+	bottom: -100px;
+	background-image: url("img/aaaaaaaaaaa.png");
+	background-position: -150px -150px;
+	overflow: hidden;
+}
+.selector_3 {
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	left: 51%;
+	transform: translateX(-51%);
+	bottom: -100px;
+	background-image: url("img/aaaaaaaaaaa.png");
+	background-position: -225px -150px;
+	overflow: hidden;
+}
+.selector_4 {
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	left: 68%;
+	transform: translateX(-68%);
+	bottom: -100px;
+	background-image: url("img/aaaaaaaaaaa.png");
+	background-position: -300px -150px;
+	overflow: hidden;
+}
+.selector_5 {
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	left: 85%;
+	transform: translateX(-85%);
+	bottom: -100px;
+	background-image: url("img/aaaaaaaaaaa.png");
+	background-position: -375px -150px;
+	overflow: hidden;
+}
+
+</style>  
+	<meta charset = "UTF-8"/> 
+	<title> Слайдер </title> 
+
+
+
+
+
+
+</head> 
+<body> 
+	<div class = "main"> 
+		<div class = "left"></div> 
+			<div class = "container"> 
+				<div class = "content">  
+				
+				</div> 
+			</div> 
+		<div class = "right"></div> 
+		<div class = "selector_1"> </div>
+		<div class = "selector_2"> </div>
+		<div class = "selector_3"> </div>
+		<div class = "selector_4"> </div>
+		<div class = "selector_5"> </div>
+	</div>
+	
+</body>
+</html>
